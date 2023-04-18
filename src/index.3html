@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/864dcc05b6.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title">TEST</p>
+      </div>
+    </section>
+    <div class="tile is-ancestor">
+      <div class="tile is-7 is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-primary">
+              <p class="title">Vertical...</p>
+              <p class="subtitle">Top tile</p>
+            </article>
+            <article class="tile is-child notification is-warning">
+              <p class="title">...tiles</p>
+              <p class="subtitle">Bottom tile</p>
+            </article>
+            <article class="tile is-child notification is-warning">
+              <p class="title">...tiles</p>
+              <p class="subtitle">Bottom tile</p>
+            </article>            
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child">
+              <p>test</p>
+            </article>
+            <article class="tile is-child notification is-info">
+              <p class="title">Middle tile</p>
+              <p class="subtitle">With an image</p>
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/640x480.png">
+              </figure>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <div class="content">
+              <!-- Content -->65465465464
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <div class="content">
+              <!-- Content -->65465465464
+            </div>
+          </article>
+          <article class="tile is-child notification is-danger">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <div class="content">
+              <!-- Content -->65465465464
+            </div>
+          </article>
+          <article class="tile is-child notification is-danger">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <div class="content">
+              <!-- Content -->65465465464
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p class="title">Tall tile</p>
+            <p class="subtitle">With even more content</p>
+            <div class="content">
+              <!-- Content -->
+            </div>
+          </div>
+        </article>
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p class="title">Tall tile</p>
+            <p class="subtitle">With even more content</p>
+            <div class="content">
+              <!-- Content -->
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  :root {
+    --brandColor: hsl(166, 67%, 51%);
+    --background: rgb(247, 247, 247);
+    --textDark: hsla(0, 0%, 0%, 0.66);
+    --textLight: hsla(0, 0%, 0%, 0.33);
+  }
+
+  body {
+    background: var(--background);
+    height: 100vh;
+    color: var(--textDark);
+  }
+
+  .field:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .register {
+    margin-top: 10rem;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .left,
+  .right {
+    padding: 4.5rem;
+  }
+
+  .left {
+    border-right: 5px solid var(--background);
+  }
+
+  .left .title {
+    font-weight: 800;
+    letter-spacing: -2px;
+  }
+
+  .left .colored {
+    color: var(--brandColor);
+    font-weight: 500;
+    margin-top: 1rem !important;
+    letter-spacing: -1px;
+  }
+
+  .left p {
+    color: var(--textLight);
+    font-size: 1.15rem;
+  }
+
+  .right .title {
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  .right .description {
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+    color: var(--textLight);
+    font-size: 1.15rem;
+  }
+
+  .right small {
+    color: var(--textLight);
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  input:focus {
+    border-color: var(--brandColor) !important;
+    box-shadow: 0 0 0 1px var(--brandColor) !important;
+  }
+
+  .fab,
+  .fas {
+    color: var(--textLight);
+    margin-right: 1rem;
+  }
+
+</style>
+</html>

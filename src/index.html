@@ -6,85 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    .va {
-      display: flex;
-      align-items: center;
-    }
-  </style>
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/864dcc05b6.js" crossorigin="anonymous"></script>
+  <title>Kroplomierz</title>
 </head>
 <body>
-  <section class="container">
-    <div class="columns is-multiline">
-      <div class="column is-8 is-offset-2 register">
-        <div class="columns">
-          <div class="column left">
-            <h1 class="title is-1">Kroplomierz</h1>
-            <h2 class="subtitle colored is-4">Metoda numer 1</h2>
-            <small>
-              <em>
-                Wpisz liczbę kropli na minutę, jaka skapała z kranu i wcisnij „Oblicz”. Przyjęto, że objętość kropli wynosi 0,2 m
-              </em>
-            </small>
-          </div>
-          <div class="column right">
-            <h1 class="title is-4">Sign up today</h1>
-            <p class="description">Wprowadź liczbę kropli na minutę</p>
-            <form>
-              <div class="field">
-                <div class="control">
-                  <input class="input is-small" type="number" placeholder="zużycie" min="1" max="9999" maxlength="4" >
-                </div>
-              </div>
+  <br>
+  <div class="container">
+    <!-- Header -->
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-child">
+          <!-- LOGO   -->
+          <figure class="image is-128x128">
+            <img src="https://raw.githubusercontent.com/wpwik/images/main/wpwik.jpg">
+          </figure>
+        </div>
+      </div>
 
-              <button class="button is-block is-primary is-fullwidth is-small">Submit</button>
-              <br />
-              <p>Strata wody wynosi:</p>
-                <ul>
-                  <li>Dziennie</li>
-                  <li>Miesięcznie</li>
-                  <li>Rocznie</li>
-                </ul>
-              <small><em>Lorem ipsum dolor sit amet consectetur.</em></small>
-            </form>
+      <div class="tile is-8 is-parent">
+        <div class="is-child">
+          <h1 class="title">Kroplomierz</h1>
+          <p>Kropelka do kropelki i uzbiera się szklanka. Szklanka do szklanki i uzbiera sie całe wiadro. Sprawdź ile wody możesz zaoszczedzić, gdy dokręcisz kran.</p>
+        </div>
+      </div>
+
+      <div class="tile is-parent is-vertical">
+        <!-- bip -->
+        <div class="tile">
+          <figure class="image is-64x64">
+            <img src="/bip.svg" alt="BIP">
+          </figure>
+        </div>
+        <div class="tile is-child">
+          <!-- Bread nav -->
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <ul>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <span class="icon is-small">
+                    <i class="fa-brands fa-facebook"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <span class="icon is-small">
+                    <i class="fa-regular fa-envelope"></i>
+                  </span>
+                  <span></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-child">
+          <aside class="menu">
+            <p class="menu-label">Menu</p>
+            <ul class="menu-list">
+              <li><a href="">Media</a></li>
+              <li><a href="">O nas</a></li>
+              <li><a href="">Twoja woda</a></li>
+              <li><a href="">Przyłącz się</a></li>
+              <li><a href="">Obsługa klienta</a></li>
+              <li><a href="">Przetargi</a></li>
+              <li><a href="">Ważne telefony</a></li>
+              <li><a href="">Komunikaty</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="tile is-8 is-vertical">
+          <div class="tile box">
+            <div class="">
+              <h1 class="title is-6">METODA 1</h1>
+              <p>Liczba kropli na minutę</p>
+              <p>Wpisz liczbę kropli na minutę, jaka skapała z kranu i wcisnij „Oblicz” Przyjęto, że objętość kropli wynosi 0,2 ml.</p>
+            </div>
+          </div>
+          <div class="tile box">
+            <div class="field">
+              <label class="label">Liczba kropli / min</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Wprowadź">
+              </div>
+            </div>
+          </div>
+          <div class="tile box">
+            <div class="">
+              <h1 class="title is-6">METODA 2</h1>
+              <p>Pojemnik i stoper</p>
+              <p>Wpisz liczbę kropli na minutę, jaka skapała z kranu i wcisnij „Oblicz” Przyjęto, że objętość kropli wynosi 0,2 ml.</p>
+            </div>
+          </div>
+          <div class="tile box">
+            <div class="field">
+              <label class="label">Czas [s]</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Wprowadź">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- menu prawe -->
+        <div class="tile is-child">
+          <div class="menu">
+            <p class="menu-label">Info</p>
+            <ul class="menu-list">
+              <li><a href="">Kroplomierz</a></li>
+              <li><a href="">Jakość wody</a></li>
+              <li><a href="">Twardość wody</a></li>
+              <li><a href="">Wędrówki wody</a></li>
+              <li><a href="">Hydrozagadki</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="column is-8 is-offset-2">
-        <br>
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
-              <span class="icon">
-                <i class="fab fa-twitter"></i>
-              </span> &emsp;
-              <span class="icon">
-                <i class="fab fa-facebook"></i>
-              </span> &emsp;
-              <span class="icon">
-                <i class="fab fa-instagram"></i>
-              </span> &emsp;
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span> &emsp;
-              <span class="icon">
-                <i class="fas fa-envelope"></i>
-              </span>
-            </div>
-          </div>
-          <div class="level-right">
-            <small class="level-item" style="color: var(--textLight)">
-              &copy; Wpwik 2023. All Rights Reserved.
-            </small>
-          </div>
-        </nav>
-      </div>
     </div>
-  </section>
+  </div>
 </body>
 <style>
-  :root {
+  /* :root {
     --brandColor: hsl(166, 67%, 51%);
     --background: rgb(247, 247, 247);
     --textDark: hsla(0, 0%, 0%, 0.66);
@@ -162,7 +207,7 @@
   .fas {
     color: var(--textLight);
     margin-right: 1rem;
-  }
+  } */
 
 </style>
 </html>
