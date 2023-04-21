@@ -1,0 +1,33 @@
+/* #inputDrips {
+  background-color: aliceblue;
+}
+
+#inputSeconds {
+  background-color: aliceblue;
+} */
+
+@keyframes inputCorrect {
+  from {background-color: #ffffff;}
+  to {background-color: #DBFEB8;}
+}
+
+.correct {
+  background-color: #DBFEB8;
+  animation-name: inputCorrect;
+  animation-duration: 2s;
+}
+
+.wrong {
+  background-color: #FF6565;
+}
+
+.empty {
+  background-color: aliceblue;
+}
+.invisible {
+  display: none !important;
+}
+
+.secondsContent {
+  display: none !important;
+}

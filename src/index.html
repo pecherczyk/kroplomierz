@@ -10,10 +10,9 @@
   <title>Kroplomierz</title>
 </head>
 <body>
-  <br>
   <div class="container">
     <!-- Header -->
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor mt-4">
       <div class="tile is-parent">
         <div class="tile is-child">
           <!-- LOGO   -->
@@ -65,7 +64,7 @@
     <div class="tile is-ancestor">
       <div class="tile is-parent">
         <div class="tile is-child">
-          <aside class="menu">
+          <aside class="menu p-4">
             <p class="menu-label">Menu</p>
             <ul class="menu-list">
               <li><a href="">Media</a></li>
@@ -79,21 +78,36 @@
             </ul>
           </aside>
         </div>
-        <div class="tile is-8 is-vertical">
+        <div class="tile is-8 is-vertical p-4">
           <div class="tile box">
-            <div class="">
-              <h1 class="title is-6">METODA 1</h1>
-              <p>Liczba kropli na minutę</p>
+            <div class="content is-small">
+              <h1>Metoda 1</h1>
+              <h2 class="subtitle is-6">Liczba kropli na minutę</h2>
               <p>Wpisz liczbę kropli na minutę, jaka skapała z kranu i wcisnij „Oblicz” Przyjęto, że objętość kropli wynosi 0,2 ml.</p>
             </div>
           </div>
           <div class="tile box">
             <div class="field">
-              <label class="label">Liczba kropli / min</label>
+              <label class="label">Krople / min   <i class="fa-solid fa-faucet-drip"></i></label>
               <div class="control">
-                <input class="input" type="text" placeholder="Wprowadź">
+                <input id="inputDrips" class="input" type="text" placeholder="Wprowadź" maxlength="6">
               </div>
             </div>
+            <div class="tile" id="dripsResult">
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie dzienne</h1>
+                <p class="m-1" id="daily"></p>
+              </article>
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie miesięczne</h1>
+                <p class="m-1" id="monthly"></p>
+              </article>
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie roczne</h1>
+                <p class="m-1 has-text-weight-semibold" id="yearly"></p>
+              </article>
+            </div>
+            <!-- WYLICZONE WARTOŚĆI -->
           </div>
           <div class="tile box">
             <div class="">
@@ -104,10 +118,24 @@
           </div>
           <div class="tile box">
             <div class="field">
-              <label class="label">Czas [s]</label>
+              <label class="label">Czas [s] <i class="fa-regular fa-clock"></i></label>
               <div class="control">
-                <input class="input" type="text" placeholder="Wprowadź">
+                <input id="inputSeconds" class="input" type="text" placeholder="Wprowadź">
               </div>
+            </div>
+            <div class="tile">
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie dzienne</h1>
+                <p></p>
+              </article>
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie miesięczne</h1>
+                <p class="monthly"></p>
+              </article>
+              <article class="content m-4">
+                <h1 class="title is-6 m-0">Zużycie roczne</h1>
+                <p class="yearly"></p>
+              </article>
             </div>
           </div>
         </div>
@@ -127,87 +155,14 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container has-text-left">
+      <div class="content is-small">
+        <p>
+          Wpwik sp. z o. o. 2023
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
-<style>
-  /* :root {
-    --brandColor: hsl(166, 67%, 51%);
-    --background: rgb(247, 247, 247);
-    --textDark: hsla(0, 0%, 0%, 0.66);
-    --textLight: hsla(0, 0%, 0%, 0.33);
-  }
-
-  body {
-    background: var(--background);
-    height: 100vh;
-    color: var(--textDark);
-  }
-
-  .field:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  .register {
-    margin-top: 10rem;
-    background: white;
-    border-radius: 10px;
-  }
-
-  .left,
-  .right {
-    padding: 4.5rem;
-  }
-
-  .left {
-    border-right: 5px solid var(--background);
-  }
-
-  .left .title {
-    font-weight: 800;
-    letter-spacing: -2px;
-  }
-
-  .left .colored {
-    color: var(--brandColor);
-    font-weight: 500;
-    margin-top: 1rem !important;
-    letter-spacing: -1px;
-  }
-
-  .left p {
-    color: var(--textLight);
-    font-size: 1.15rem;
-  }
-
-  .right .title {
-    font-weight: 800;
-    letter-spacing: -1px;
-  }
-
-  .right .description {
-    margin-top: 1rem;
-    margin-bottom: 1rem !important;
-    color: var(--textLight);
-    font-size: 1.15rem;
-  }
-
-  .right small {
-    color: var(--textLight);
-  }
-
-  input {
-    font-size: 1rem;
-  }
-
-  input:focus {
-    border-color: var(--brandColor) !important;
-    box-shadow: 0 0 0 1px var(--brandColor) !important;
-  }
-
-  .fab,
-  .fas {
-    color: var(--textLight);
-    margin-right: 1rem;
-  } */
-
-</style>
 </html>

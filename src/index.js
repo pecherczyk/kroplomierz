@@ -1,3 +1,5 @@
+import './style.css'
+
 const BigDecimal = require('js-big-decimal')
 
 function countLiters (amount) {
@@ -21,12 +23,40 @@ function countLiters (amount) {
   day.innerHTML = dayWaste
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const inputDips = document.getElementById('drips')
-  const submitButton = document.getElementById('run')
+function validateDrips (input) {
+  const pattern = /^[1-9]\d*$/
+  return pattern.test(input)
+}
 
-  inputDips.addEventListener('change', function () {
-    const val = inputDips.value
-    countLiters(val)
-  })
+const inputDrips = document.getElementById('inputDrips')
+const result = document.getElementById('dripsResult')
+
+inputDrips.addEventListener('input', () => {
+  const inputVal = inputDrips.value
+  if (validateDrips(inputVal)) {
+    const list = result.classList
+    list.remove('invisible')
+    inputDrips.classList.remove('wrong')
+    inputDrips.classList.add('correct')
+    console.log(inputVal)
+    // Policz użycie
+    setTimeout(() => {
+      countLiters(inputVal)
+    }, 600)
+    console.log(inputDrips.classList)
+  } else {
+    inputDrips.classList.remove('correct')
+    inputDrips.classList.add('wrong')
+
+    const list = result.classList
+    list.add('invisible')
+    //
+    // inputDrips.classList.add('correct')
+  }
+  if (inputVal === '') {
+    inputDrips.classList.remove('wrong')
+    inputDrips.classList.remove('correct')
+    // clear previous
+    countLiters(0)
+  }
 })
