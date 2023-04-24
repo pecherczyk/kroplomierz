@@ -110,31 +110,31 @@
             <!-- WYLICZONE WARTOŚĆI -->
           </div>
           <div class="tile box">
-            <div class="">
-              <h1 class="title is-6">METODA 2</h1>
-              <p>Pojemnik i stoper</p>
-              <p>Wpisz liczbę kropli na minutę, jaka skapała z kranu i wcisnij „Oblicz” Przyjęto, że objętość kropli wynosi 0,2 ml.</p>
+            <div class="content is-small">
+              <h1>Metoda 2</h1>
+              <h2 class="subtitle is-6">Pojemnik i stoper</h2>
+              <p>Ustawiamy pod kranem szklankę i mierzymy stoperem czas jej napełnienia. Przyjęto, że szklanka ma 250 ml.</p>
             </div>
           </div>
           <div class="tile box">
             <div class="field">
               <label class="label">Czas [s] <i class="fa-regular fa-clock"></i></label>
               <div class="control">
-                <input id="inputSeconds" class="input" type="text" placeholder="Wprowadź">
+                <input id="inputSeconds" class="input" type="text" placeholder="Wprowadź" maxlength="6">
               </div>
             </div>
-            <div class="tile">
+            <div id="secondsResult" class="tile">
               <article class="content m-4">
                 <h1 class="title is-6 m-0">Zużycie dzienne</h1>
-                <p></p>
+                <p id="daily2"></p>
               </article>
               <article class="content m-4">
                 <h1 class="title is-6 m-0">Zużycie miesięczne</h1>
-                <p class="monthly"></p>
+                <p id="monthly2"></p>
               </article>
               <article class="content m-4">
                 <h1 class="title is-6 m-0">Zużycie roczne</h1>
-                <p class="yearly"></p>
+                <p id="yearly2"></p>
               </article>
             </div>
           </div>
