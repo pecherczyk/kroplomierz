@@ -14,13 +14,14 @@ function renderResult (targetID, callback, value, period) {
     if ((period !== 'year' &&
          period !== 'day' &&
          period !== 'month')) {
-      throw new SyntaxError('Wrong parameter was given!')
+      throw new SyntaxError('Wrong parameter was given!  ')
     }
     el.innerHTML = callback(value)[period]
-  } catch (error) {
-    console.error('przekazano błędny parametr: ' + period)
+    document.getElementById(targetID).appendChild(el)
+  } catch (err) {
+    console.error('22')
+    // console.error(err.message + 'Parameter: ' + period)
   }
-  document.getElementById(targetID).appendChild(el)
 }
 
 export default renderResult

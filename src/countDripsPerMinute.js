@@ -28,12 +28,12 @@ function countDripsPerMinute (drips) {
     .multiply(DAY)
     .multiply(drips)
 
-  const ob = {
+  const result = {
     year: yearWaste.getPrettyValue(3, ' '),
     month: monthWaste.getPrettyValue(3, ' '),
     day: dayWaste.getPrettyValue(3, ' ')
   }
-  return ob
+  return result
 }
 
 export default countDripsPerMinute

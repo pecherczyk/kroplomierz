@@ -2,8 +2,12 @@ import './style.css'
 import { validator } from './validator'
 import countDripsPerMinute from './countDripsPerMinute'
 import renderResult from './render'
+import countSecondsPerGlass from './countSecondsPerGlass'
 
 renderResult('yearly', countDripsPerMinute, 1200, 'day')
+// renderResult('yearly1', countSecondsPerGlass, 12, 'day')
+
+countSecondsPerGlass(222)
 
 const BigDecimal = require('js-big-decimal')
 
