@@ -1,5 +1,9 @@
 import './style.css'
 import { validator } from './validator'
+import countDripsPerMinute from './countDripsPerMinute'
+import renderResult from './render'
+
+renderResult('yearly', countDripsPerMinute, 1200, 'day')
 
 const BigDecimal = require('js-big-decimal')
 
@@ -70,6 +74,7 @@ inputDrips.addEventListener('input', () => {
   const inputVal = inputDrips.value
   if (validator(inputVal)) {
     const list = dripsResult.classList
+    console.log(list)
     list.remove('invisible')
     inputDrips.classList.remove('wrong')
     inputDrips.classList.add('correct')
