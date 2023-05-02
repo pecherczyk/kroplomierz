@@ -1,11 +1,7 @@
 const BigDecimal = require('js-big-decimal')
 
 function countDripsPerMinute (drips) {
-  const type = typeof drips
-
-  if (type !== 'number') {
-    console.error('Wrong type given')
-  }
+  drips = Number(drips)
 
   drips = new BigDecimal(drips)
 

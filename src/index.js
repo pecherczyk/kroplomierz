@@ -4,43 +4,12 @@ import countDripsPerMinute from './countDripsPerMinute'
 import renderResult from './render'
 import countSecondsPerGlass from './countSecondsPerGlass'
 
-renderResult('yearly', countDripsPerMinute, 1200, 'day')
-// renderResult('yearly1', countSecondsPerGlass, 12, 'day')
-
-countSecondsPerGlass(222)
-
 const BigDecimal = require('js-big-decimal')
 
-function countLiters (amount) {
-  amount = new BigDecimal(amount)
-  const DROP = new BigDecimal(0.00005)
-  // const HOUR = new BigDecimal(60)
-  const DAY = new BigDecimal(1440)
-  const MONTH = new BigDecimal(44640)
-  const YEAR = new BigDecimal(525600)
-
-  const yearWaste = DROP
-    .multiply(YEAR)
-    .multiply(amount)
-    .round(0)
-  const year = document.getElementById('yearly')
-  year.innerHTML = yearWaste.getPrettyValue(3, ' ')
-
-  const monthWaste = DROP
-    .multiply(MONTH)
-    .multiply(amount)
-    .round(2)
-  const month = document.getElementById('monthly')
-  month.innerHTML = monthWaste.getPrettyValue(3, ' ')
-
-  const dayWaste = DROP
-    .multiply(DAY)
-    .multiply(amount)
-  const day = document.getElementById('daily')
-  day.innerHTML = dayWaste.getPrettyValue(3, ' ')
-}
-
 function countLiters2 (seconds) {
+  if (seconds === 0) {
+    return 0
+  }
   seconds = new BigDecimal(seconds)
 
   const GLASS = new BigDecimal(0.25)
@@ -74,33 +43,34 @@ const inputSeconds = document.getElementById('inputSeconds')
 const dripsResult = document.getElementById('dripsResult')
 const secondsResult = document.getElementById('secondsResult')
 
+function inputSetColor (input, color) {
+  // funkcja zmieniająca background color inputa
+  console.log(input.classList)
+}
+
 inputDrips.addEventListener('input', () => {
   const inputVal = inputDrips.value
   if (validator(inputVal)) {
     const list = dripsResult.classList
-    console.log(list)
     list.remove('invisible')
     inputDrips.classList.remove('wrong')
     inputDrips.classList.add('correct')
-
     // Policz użycie
     setTimeout(() => {
-      countLiters(inputVal)
-    }, 200)
+      renderResult('daily', countDripsPerMinute, inputVal, 'day')
+      renderResult('monthly', countDripsPerMinute, inputVal, 'month')
+      renderResult('yearly', countDripsPerMinute, inputVal, 'year')
+    }, 750)
   } else {
     inputDrips.classList.remove('correct')
     inputDrips.classList.add('wrong')
 
     const list = dripsResult.classList
     list.add('invisible')
-    //
-    // inputDrips.classList.add('correct')
   }
   if (inputVal === '') {
     inputDrips.classList.remove('wrong')
     inputDrips.classList.remove('correct')
-    // clear previous
-    countLiters(0)
   }
 })
 

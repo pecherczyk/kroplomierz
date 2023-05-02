@@ -1,4 +1,3 @@
-
 /**
  * Funkcja licząca zużycie wody na podstawie szklanki.
  * @param { number } - Czas w sekundach [s]
@@ -8,6 +7,9 @@
 const BigDecimal = require('js-big-decimal')
 
 function countSecondsPerGlass (seconds) {
+  if (seconds === 0) {
+    return 0
+  }
   seconds = new BigDecimal(seconds)
   const GLASS = new BigDecimal(0.25)
 

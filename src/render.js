@@ -7,20 +7,16 @@
  */
 
 function renderResult (targetID, callback, value, period) {
-  const el = document.createElement('span')
-  el.setAttribute('class', 'dodana')
-
   try {
     if ((period !== 'year' &&
          period !== 'day' &&
          period !== 'month')) {
       throw new SyntaxError('Wrong parameter was given!  ')
     }
-    el.innerHTML = callback(value)[period]
-    document.getElementById(targetID).appendChild(el)
+    const result = callback(value)[period]
+    document.getElementById(targetID).innerHTML = result
   } catch (err) {
-    console.error('22')
-    // console.error(err.message + 'Parameter: ' + period)
+    console.error('Error: ' + err.message)
   }
 }
 
