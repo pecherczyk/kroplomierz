@@ -22,7 +22,7 @@ inputDrips.addEventListener('input', () => {
       renderResult('daily', countDripsPerMinute, inputVal, 'day')
       renderResult('monthly', countDripsPerMinute, inputVal, 'month')
       renderResult('yearly', countDripsPerMinute, inputVal, 'year')
-    }, 750)
+    }, 250)
   } else {
     inputSetColor(inputDrips, 'wrong')
     dripsResult.classList.add('invisible')
