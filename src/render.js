@@ -14,7 +14,7 @@ function renderResult (targetID, callback, value, period) {
       throw new SyntaxError('Wrong parameter was given!  ')
     }
     const result = callback(value)[period]
-    document.getElementById(targetID).innerHTML = result
+    document.getElementById(targetID).innerHTML = ' ' + result
   } catch (err) {
     console.error('Error: ' + err.message)
   }
